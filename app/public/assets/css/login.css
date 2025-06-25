@@ -1,0 +1,133 @@
+/* Estilos base */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  background-image: url("https://www.chevalerias.com/wp-content/uploads/2023/05/pourquoi-2-768x512.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Contenedor del login */
+.login-container {
+  background-color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.login-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos del avatar */
+.avatar-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.avatar-ring {
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  padding: 0.25rem;
+  background: linear-gradient(
+    135deg,
+    rgba(107, 115, 255, 0.8) 0%,
+    rgba(0, 13, 255, 0.8) 100%
+  );
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+/* Campos de formulario */
+.input-field {
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid rgba(203, 213, 225, 0.5);
+}
+
+.input-field:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+  background-color: white;
+}
+
+/* Botón de login */
+.login-btn {
+  background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+  padding: 0.75rem;
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Mensajes de error */
+.error-message {
+  animation: fadeIn 0.5s ease;
+  background-color: rgba(239, 68, 68, 0.9);
+  color: white;
+  border: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .login-container {
+    padding: 1.25rem;
+    max-width: 98vw;
+    min-width: 0;
+  }
+
+  .avatar-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  h2.text-2xl {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .login-container {
+    padding: 0.5rem;
+  }
+}
